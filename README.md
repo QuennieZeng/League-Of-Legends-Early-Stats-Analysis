@@ -217,8 +217,10 @@ Here is the observed distribution when `firstdragon` was missing:
 | LPL    | 0.0         |
 | WLDs   | 0.0         |
 
-When we plot our league_dist as a bar graph to see the distribution, we get
+
 <iframe src="assets/Missingness_of_firstdragon_barchart.html" width="800" height="600"></iframe>
+
+In this bar chart we can see how the missing values for the column ‘firstdragon’ is concentrated in four leagues, with the majority being in two leagues: LPL and LDL.
 
 Our observed statistic was: 0.9923034634414514
 
