@@ -293,7 +293,7 @@ Here is the empirical distribution of the test statistic:
 
 For our hypothesis testing, we did 500 simulations and were able to see that the p-value is significant as it is smaller than 0.05. 
 
-Conclusion: We may reject the null hypothesis, meaning we believe that the distributions are not the same.
+Conclusion: We reject the null hypothesis, meaning we believe that the distributions are not the same.
 
 Since we may reject the null hypothesis this means there is a good amount of evidence that the distribution of early game statistics in games where the team won is different from the distribution of statistics where the team won. 
 
