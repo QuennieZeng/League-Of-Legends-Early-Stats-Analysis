@@ -111,8 +111,12 @@ In this dataframe, we went through each 10th and 11th row, as that would be the 
 ### EDA
 #### Univariate Testing:
 
-
 [insert pie chart]
+These pie charts show the proportion of games won when a team secures an early game objective.
+
+
+=======
+
 These pie charts show the proportion of games won when a team secures an early game objective.
 
 
@@ -120,13 +124,16 @@ These pie charts show the proportion of games won when a team secures an early g
 
 From these histograms, we can see that winning teams have a higher, more likely positive, gold difference than losing teams.
 
+
+=======
+
 [insert bar graphs]
 
 These bar graphs show the proportion of teams that secure an early game objective that ends up winning. Different from the pie charts from before, these bar charts focus on the proportion of winning teams that claim objectives, as the pie charts focus on the win rates of teams that get certain early-game objectives.
 
 ### Bivariate Testing
 
-[insert bar chart of objectives]
+
 
 This bar chart shows the winning percentages of teams that achieved certain objectives. We can see that getting first blood has a lesser impact on winning than claiming the other objectives, which are roughly the same.
 
@@ -225,6 +232,7 @@ If the p-value is significant (below the chosen significance level), we may reje
 
 Here is the empirical distribution of the test statistic:
 
+
 [insert tvd]
 
 
@@ -247,7 +255,6 @@ Since the p-value is above the chosen significance level, p-value from the test 
 
 Here is the empirical distribution of the test statistic:
 
-[insert tvd]
 
 ---
 
@@ -260,6 +267,7 @@ Here is the empirical distribution of the test statistic:
 
 We decided to use Total Variation Distance because we are using categoricial data, more specifically whether our sample distributions came from the same distribution. Our significance level is going to be 0.05 as it is the standard significance level. 
 
+<<<<<<< HEAD
 We found the distribution of early game statistics and how the amount of points can correlate with the result of the game. 
 
 | points | 0.0      | 1.0      | 2.0      | 3.0      | 4.0      | 5.0      | 6.0      | 7.0      | 8.0      | 9.0      | 10.0     |
@@ -279,6 +287,5 @@ For our hypothesis testing, we did 500 simulations and were able to see that the
 Conclusion: We may reject the null hypothesis, meaning we believe that the distributions are not the same.
 
 Since we may reject the null hypothesis this means there is a good amount of evidence that the distribution of early game statistics in games where the team won is different from the distribution of statistics where the team won. 
-
 ---
 
