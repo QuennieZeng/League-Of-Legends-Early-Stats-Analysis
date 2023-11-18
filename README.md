@@ -57,8 +57,6 @@ Similar to the previous section, this section gives team statistics for 15 minut
 
 ### Data Cleaning:
 
-We decided to keep the columns above. When we first started looking at the data, we noticed that the number of wins and the number of losses were not the same, there were four more losses than wins, meaning that for two games there was no winner.
-
 This is the head of our df dataframe:
 
 | gameid | datacompleteness | url | league | year | split | playoffs | date | game | patch | ... | opp_csat15 | golddiffat15 | xpdiffat15 | csdiffat15 | killsat15 | assistsat15 | deathsat15 | opp_killsat15 | opp_assistsat15 | opp_deathsat15 |
@@ -70,7 +68,15 @@ This is the head of our df dataframe:
 | ESPORTSTMNT01_2690210 | complete | NaN | LCKC | 2022 | Spring | 0 | 2022-01-10 07:44:08 | 1 | 12.01 | ... | 21.0 | 443.0 | -497.0 | 7.0 | 1.0 | 2.0 | 2.0 | 0.0 | 6.0 | 2.0 |
 | ESPORTSTMNT01_2690210 | complete | NaN | LCKC | 2022 | Spring | 0 | 2022-01-10 07:44:08 | 1 | 12.01 | ... | 135.0 | -391.0 | -345.0 | -14.0 | 0.0 | 1.0 | 0.0 | 0.0 | 1.0 | 0.0 |
 
+We decided to keep the columns above. When we first started looking at the data, we noticed that the number of wins and the number of losses were not the same, there were four more losses than wins, meaning that for two games there was no winner.
 
+| gameid               | datacompleteness | league | playoffs | result | firstblood | firstdragon | firstherald | firsttower | goldat10 | ... | deathsat10 | goldat15 | xpat15  | csat15  | golddiffat15 | xpdiffat15 | csdiffat15 | killsat15 | assistsat15 | deathsat15 |
+|----------------------|------------------|--------|----------|--------|------------|-------------|-------------|------------|----------|-----|------------|----------|---------|---------|--------------|------------|------------|-----------|-------------|------------|
+| 11                   | complete         | LCKC   | False    | True   | True       | False       | True        | False      | False    | ... | 3.0        | 24699.0  | 29618.0 | 510.0   | -107.0       | 1617.0     | 23.0       | 6.0       | 18.0        | 5.0        |
+| 23                   | complete         | LCKC   | False    | True   | True       | True        | True        | False      | True     | ... | 1.0        | 25285.0  | 29754.0 | 555.0   | 1763.0       | 906.0      | 22.0       | 3.0       | 3.0         | 1.0        |
+| 34                   | partial          | LPL    | False    | True   | True       | False       | NaN         | NaN        | NaN      | ... | NaN        | NaN      | NaN     | NaN     | NaN          | NaN        | NaN        | NaN       | NaN         | NaN        |
+| 46                   | complete         | LCKC   | False    | True   | True       | False       | True        | False      | True     | ... | 1.0        | 24795.0  | 31342.0 | 560.0   | 1191.0       | 2298.0     | 15.0       | 3.0       | 8.0         | 1.0        |
+| 58                   | partial          | LPL    | False    | True   | True       | True        | NaN         | NaN        | NaN      | ... | NaN        | NaN      | NaN     | NaN     | NaN          | NaN        | NaN        | NaN       | NaN         | NaN        |
 
 
 
