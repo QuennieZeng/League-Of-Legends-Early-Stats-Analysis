@@ -230,7 +230,7 @@ If the p-value is significant (below the chosen significance level), we may reje
 
 Here is the empirical distribution of the test statistic:
 
-<iframe src="assets/emprical_distribution_of_the_tvd_for_firstdragon_and_league.html" width="800" height="600"></iframe>
+<iframe src="assets/emprical_distribution_of_the_tvd_for_firstdragon_and_league%20(2).html" width="800" height="600"></iframe>
 
 
 
@@ -259,7 +259,7 @@ Since the p-value is above the chosen significance level, p-value from the test 
 
 Here is the empirical distribution of the test statistic:
 
-<iframe src="assets/empirical_distribution_of_the_tvd_firstblood_vs_missingness_of_firstdragon.html" width="800" height="600"></iframe>
+<iframe src="assets/empirical_distribution_of_the_tvd_firstblood_vs_missingness_of_firstdragon%20(1).html" width="800" height="600"></iframe>
 
 ---
 
