@@ -267,7 +267,7 @@ Here is the empirical distribution of the test statistic:
 
 We decided to use Total Variation Distance because we are using categoricial data, more specifically whether our sample distributions came from the same distribution. Our significance level is going to be 0.05 as it is the standard significance level. 
 
-<<<<<<< HEAD
+
 We found the distribution of early game statistics and how the amount of points can correlate with the result of the game. 
 
 | points | 0.0      | 1.0      | 2.0      | 3.0      | 4.0      | 5.0      | 6.0      | 7.0      | 8.0      | 9.0      | 10.0     |
@@ -287,5 +287,4 @@ For our hypothesis testing, we did 500 simulations and were able to see that the
 Conclusion: We may reject the null hypothesis, meaning we believe that the distributions are not the same.
 
 Since we may reject the null hypothesis this means there is a good amount of evidence that the distribution of early game statistics in games where the team won is different from the distribution of statistics where the team won. 
----
 
