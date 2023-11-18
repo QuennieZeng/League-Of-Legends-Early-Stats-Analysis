@@ -111,8 +111,7 @@ In this dataframe, we went through each 10th and 11th row, as that would be the 
 
 ### EDA
 #### Univariate Testing:
-
-<iframe src="Percentage_of_Wins_with_First_Tower_pie_chart.html" width="800" height="600"></iframe>
+<iframe src="assets/Percentage_of_Wins_with_First_Tower_pie_chart.html" width="800" height="600"></iframe>
 
 These pie charts show the proportion of games won when a team secures an early game objective.
 
