@@ -112,29 +112,28 @@ In this dataframe, we went through each 10th and 11th row, as that would be the 
 ### EDA
 #### Univariate Testing:
 <iframe src="assets/Percentage_of_Wins_with_First_Tower_pie_chart.html" width="800" height="600"></iframe>
+<iframe src="assets/Percentage_of_Wins_with_First_Herald_pie_chart.html" width="800" height="600"></iframe>
+<iframe src="assets/Percentage_of_Wins_with_First_Dragon_pie_chart.html" width="800" height="600"></iframe>
+<iframe src="assets/Percentage_of_Wins_with_First_Blood_pie_chart.html" width="800" height="600"></iframe>
 
 These pie charts show the proportion of games won when a team secures an early game objective.
-
-
-
-[insert bar graphs]
-
-These bar graphs show the proportion of teams that secure an early game objective that ends up winning. Different from the pie charts from before, these bar charts focus on the proportion of winning teams that claim objectives, as the pie charts focus on the win rates of teams that get certain early-game objectives.
 
 ### Bivariate Testing
 
 
-[insert histogram of golddiff for winning teams v gold diff for losing teams]
+
+<iframe src="assets/Gold_Diff_at_15_Winning_v_Losing_Histogram.html" width="800" height="600"></iframe>
 
 From these histograms, we can see that winning teams have a higher, more likely positive, gold difference than losing teams.
 
+<iframe src="assets/early_game_object_freq_of_winning_teams_bar_chart.html" width="800" height="600"></iframe>
 
 
-This bar chart shows the winning percentages of teams that achieved certain objectives. We can see that getting first blood has a lesser impact on winning than claiming the other objectives, which are roughly the same.
+These bar graphs show the proportion of winning teams that secure early game objectives. Different from the pie charts from before, these bar charts focus on the proportion of winning teams that claim each specific objective, as the pie charts focus on the win rate of teams that get certain early-game objectives. As you can see, more winning teams get First Blood and First Tower than First Dragon or First Herald.
 
 ### Interesting Aggregates
 
-This `groupby()` highlights the mean number of early statistics when teams lose or win. The first row is when the team loses and the second row is when the team wins. We can see the distribution between winning or losing with a particular early stat. For instance we are much more likely to win with `firsttower` than win without it. This aggregate lets we see if we got an early stat what are the chances of we winning. 
+This `groupby()` highlights the mean number of early statistics when teams lose or win. The first row is when the team loses and the second row is when the team wins. We can see the distribution between winning and losing with a particular early stat. For instance, we are much more likely to win with `firsttower` than win without it. This aggregate lets us see if we got an early stat and what are the chances of winning. 
 
 | result | first_dragon_mean | first_blood_mean | first_herald_mean | first_tower_mean | goldat10 | xpat10 | csat10 | killsat10 | assistsat10 | deathsat10 | goldat15 | xpat15 | csat15 | killsat15 | assistsat15 | deathsat15 |
 |--------|-------------------:|------------------:|-------------------:|------------------:|---------:|-------:|-------:|----------:|------------:|------------:|---------:|-------:|-------:|----------:|------------:|------------:|
@@ -218,6 +217,8 @@ Here is the observed distribution when `firstdragon` was missing:
 | LPL    | 0.0         |
 | WLDs   | 0.0         |
 
+When we plot our league_dist as a bar graph to see the distribution, we get
+<iframe src="assets/Missingness_of_firstdragon_barchart.html" width="800" height="600"></iframe>
 
 Our observed statistic was: 0.9923034634414514
 
@@ -227,8 +228,8 @@ If the p-value is significant (below the chosen significance level), we may reje
 
 Here is the empirical distribution of the test statistic:
 
+<iframe src="assets/emprical_distribution_of_the_tvd_for_firstdragon_and_league.html" width="800" height="600"></iframe>
 
-[insert tvd]
 
 
 #### Missingness of `firstdragon` does not depend on `firstblood`
@@ -243,13 +244,20 @@ Here is the observed distribution when `firstdragon` and `firstblood` was missin
 | False        | 0.500705                    | 0.5011                       |
 | True         | 0.499295                    | 0.4989                       |
 
-Our observed statistic was: 0.00039462604900317166
+When we graph this, we see that missingness is close to each other when a team loses or wins. 
 
+<iframe src="assets/firstblood_v_missingness_of_first_dragon_barchart.html" width="800" height="600"></iframe>
+
+After running our tests, we get 
+
+Our observed statistic was: 0.00039462604900317166
 Our p-value was: 0.948
-Since the p-value is above the chosen significance level, p-value from the test is not significant and we fail to reject the null hypothesis. In this case, we might conclude that the data is missing completely at random (MCAR).
+
+Since the p-value is above the chosen significance level, p-value from the test is not significant and we fail to reject the null hypothesis. In this case, we might conclude that the data is missing completely at random (MCAR). This makes sense as in our bar graph, we can see that the missingness does not look like they have any relation with each other. 
 
 Here is the empirical distribution of the test statistic:
 
+<iframe src="assets/empirical_distribution_of_the_tvd_firstblood_vs_missingness_of_firstdragon.html" width="800" height="600"></iframe>
 
 ---
 
@@ -271,11 +279,15 @@ We found the distribution of early game statistics and how the amount of points 
 | False  | 0.909385 | 0.84707  | 0.759547 | 0.687318 | 0.589577 | 0.495258 | 0.408747 | 0.311444 | 0.241554 | 0.147168 | 0.09106  |
 | True   | 0.090615 | 0.15293  | 0.240453 | 0.312682 | 0.410423 | 0.504742 | 0.591253 | 0.688556 | 0.758446 | 0.852832 | 0.90894  |
 
+Looking at this through a bar chart,
+
+<iframe src="assets/distribution_bar_plot_of_points_for_win_and_loss.html" width="800" height="600"></iframe>
+
 Our observed statistic was: 0.05610845677532025
 Our p-value: 0.0
 
 Here is the empirical distribution of the test statistic: 
-[insert tvd]
+<iframe src="assets/empirical_distribution_of_hypothesis_test.html" width="800" height="600"></iframe>
 
 For our hypothesis testing, we did 500 simulations and were able to see that the p-value is significant as it is smaller than 0.05. 
 
